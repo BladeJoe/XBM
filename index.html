@@ -7,48 +7,81 @@
     <meta name="description" content="Professional portfolio of Behzodkhon Khamdamov">
     <title>Behzodkhon Khamdamov - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('navLinks');
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.nav-links li a');
 
+            // Toggle hamburger menu
             hamburger.addEventListener('click', function () {
                 navLinks.classList.toggle('active');
                 hamburger.classList.toggle('active');
             });
 
+            // AOS initialization
             AOS.init({
                 once: false,
                 startEvent: 'DOMContentLoaded',
                 easing: 'ease-in-out',
             });
+
+            // Add active class based on scroll position
+            const makeNavActive = () => {
+                let scrollY = window.scrollY;
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 100; // Adjust for header height
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navItems.forEach((item) => {
+                            item.classList.remove('active');
+                            item.removeAttribute('onclick'); // Make other links clickable
+                        });
+                        const activeLink = document.querySelector(`.nav-links li a[href="#${sectionId}"]`);
+                        activeLink.classList.add('active');
+                        activeLink.setAttribute('onclick', 'return false'); // Make the active link unclickable
+                    }
+                });
+            };
+
+            // Call on scroll and page load
+            window.addEventListener('scroll', makeNavActive);
+            makeNavActive();
         });
     </script>
+
 </head>
 
 <body>
     <!-- Navigation -->
     <header>
-        <div class="hamburger active" id="hamburger">
+        <div class="hamburger" id="hamburger">
             <div></div>
             <div></div>
             <div></div>
         </div>
         <nav>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li> <!-- Links to #home section -->
+                <li><a href="#about">About</a></li> <!-- Links to #about section -->
+                <li><a href="#experience">Experience</a></li> <!-- Links to #experience section -->
+                <li><a href="#education">Education</a></li> <!-- Links to #education section -->
+                <li><a href="#skills">Skills</a></li> <!-- Links to #skills section -->
+                <li><a href="#languages">Languages</a></li> <!-- Links to #languages section -->
+                <li><a href="#certificates">Certificates</a></li> <!-- Links to #certificates section -->
+                <li><a href="#contact">Contact</a></li> <!-- Links to #contact section -->
             </ul>
         </nav>
     </header>
+
 
     <!-- Home Section -->
     <section id="home" class="home fade-in" data-aos="fade-up" data-aos-duration="500" data-aos-once="false">

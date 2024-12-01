@@ -16,26 +16,23 @@ body {
   user-select: none;  
 }
 
-/* General Navbar Styles */
-header {
-    position: relative;
+header { 
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0; /* Ensures it spans from the left edge */
+    width: 100%; /* Stretches across the full width of the page */
     padding: 10px 20px; /* Reduced padding for header */
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
     display: flex; 
     justify-content: space-around;
     gap: 10px;
     align-items: center;
     height: 50px; /* Fixed header height for desktop */
-    transform: translateY(-100%); /* Initially hidden off-screen */
-    transition: transform 0.4s ease-in-out; /* Slide effect */
+    transition: all 0.4s ease-in-out; /* Slide effect */
+    z-index: 1000; /* Ensures it's above other elements */
 }
 
-/* When active class is added, header slides down */
-header.active {
-    transform: translateY(0); /* Slide into place */
- 
-}
 
 a{
     text-decoration-style: none;
@@ -52,12 +49,27 @@ a:hover{
         0 0 40px #009999,  /* Stronger cyan */
         0 0 50px #009999;  /* Intense neon cyan glow */
 }
+
+.active{
+     color: #ffffff !important; /* White text */  
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan */
+}
 .nav-links {
     display: flex;
     justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.nav-links.active {
+    transform: translateY(0); /* Slide into place */
+ 
 }
 
 .nav-links li {
