@@ -1,0 +1,744 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Consolas', monospace;
+    color: #ddd;
+    background-color: #121212;
+    line-height: 1.6;
+      -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;  
+}
+
+/* General Navbar Styles */
+header {
+    position: relative;
+    padding: 10px 20px; /* Reduced padding for header */
+    background-color: #333;
+    color: white;
+    display: flex; 
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    height: 50px; /* Fixed header height for desktop */
+    transform: translateY(-100%); /* Initially hidden off-screen */
+    transition: transform 0.4s ease-in-out; /* Slide effect */
+}
+
+/* When active class is added, header slides down */
+header.active {
+    transform: translateY(0); /* Slide into place */
+ 
+}
+
+a{
+    text-decoration-style: none;
+    color: inherit;
+}
+
+a:hover{ 
+    color: #ffffff !important; /* White text */  
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Reduced margin between items */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;  /* Reduced font size for navbar links */
+    transition: all 0.5s;
+}
+
+.nav-links a:hover {
+    color: #ffffff !important; /* White text */ 
+    position: relative;   
+    transition: all 0.5s;
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger div {
+    width: 25px; /* Reduced width for hamburger lines */
+    height: 3px; /* Reduced height for hamburger lines */
+    background-color: white;
+    margin: 5px 0; /* Reduced margin */
+    transition: 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Adjust header height for mobile */
+    header {
+        transition: height 1s ease-in-out, padding 1s ease-in-out; /* Apply transition to height and padding */
+        height: 50px; /* Reduced height for header on mobile */
+        padding: 5px 20px; /* Reduced padding on mobile */
+        z-index: 1;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px; /* Adjusted position */
+        right: 20px;
+    }
+
+    /* Hide the nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 40px; /* Adjusted for smaller header height */
+        right: 0;
+        background-color: #333; 
+        width: 100%;
+        padding: 15px 0;
+        border-radius: 8px;
+        margin-top: 5px; 
+    }
+
+    /* When the hamburger menu is clicked, show the nav links */
+    .nav-links.active {
+        display: flex;
+        transition: 1s all ;
+        transition: 1s all ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 8px 0; /* Reduced margin between items on mobile */
+    }
+
+    /* Adjust font sizes for mobile */
+    h1, h2, p {
+        font-size: 1rem; /* Smaller font size for headings and paragraphs */
+        max-width: 80% !important;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Even smaller font size for navbar links */
+    }
+
+    .skill {
+        font-size: 0.8rem; /* Smaller font size for skills */
+    }
+}
+
+/* Hamburger Menu Transformation */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.home{ 
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 60px; 
+    background-color: #1c1c1c;
+    color: #ddd;
+}
+
+
+/* Section Styling */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 60px; 
+    background-color: #333;
+    color: #ddd;
+}
+ 
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.2rem; /* Reduced heading size for desktop */
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 1.8rem; /* Reduced heading size for desktop */
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    font-size: 0.9rem; /* Reduced font size for paragraphs */
+    color: #bbb;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+h1 .highlight, h2 .highlight {
+    color: #ffffff !important; /* White text */
+    font-weight: 600;
+    position: relative;
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+h1 .highlight::before, h2 .highlight::before {
+    content: "";
+    top: -4px;  /* Reduced the offset */
+    left: -4px; /* Reduced the offset */
+    right: -4px; /* Reduced the offset */
+    bottom: -4px; /* Reduced the offset */
+    background: rgba(0, 179, 179, 0.1); /* Light cyan haze for subtle glow */
+    border-radius: 5px; /* Softer rounded corners */
+    box-shadow: 0 0 1px rgba(0, 179, 179, 0.05); /* Softer cyan halo */
+    z-index: -1;
+}
+ /* General Grid Layout */
+
+ .skills{
+    
+    background-color: #1c1c1c !important;
+ }
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on larger screens */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    justify-items: center; /* Center items in each grid cell */
+    margin-top: 30px; /* Top margin for spacing */
+    max-width: 1000px; /* Set a maximum width to limit the size */
+    margin-left: auto; /* Center the grid horizontally */
+    margin-right: auto; /* Center the grid horizontally */
+}
+
+/* Skill Block Styling */
+.skill {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 15px; /* Increased padding for better readability */
+    border-radius: 10px; /* Rounded corners */
+    font-weight: 600;
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    text-align: center;
+    cursor: pointer;
+    min-width: 300px; /* Prevent items from shrinking too much */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* Hover Effects */
+.skill:hover {
+     transform: translateX(10px);    
+     background-color: #444;  
+    color: #ffffff !important; /* White text */ 
+    position: relative;
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+/* AOS Fade-in Animation */
+.skill[data-aos="fade-up"] {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill[data-aos="fade-up"].aos-animate {
+    opacity: 1; /* Fade in */
+}
+ .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px; /* Space between grid items */
+   transform: translateY(0); /* Move to original position */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep two items per row on tablets */
+        padding: 15px; /* Reduced padding */
+        max-width: 90%; /* Make it responsive on medium screens */
+    }
+
+    .skill {
+        font-size: 1.1rem; /* Adjust font size */
+        padding: 20px 12px; /* Adjust padding for smaller screens */
+        min-width: 160px; /* Prevent too small items */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* One item per row on small screens */
+        gap: 15px; /* Adjust gap for better layout */
+        max-width: 100%; /* Ensure the grid takes the full width on smaller screens */
+    }
+
+    .skill {
+        font-size: 1rem; /* Smaller text for small screens */
+        padding: 15px 10px; /* Smaller padding */
+        min-width: 140px; /* Ensure it doesn’t get too small */
+    }
+}
+
+
+/* Projects Section */
+#projects {
+    background-color: #121212;
+    padding: 80px 0;
+    text-align: center;
+}
+ 
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 80%;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);    
+     background-color: #444;  
+    color: #ffffff !important; /* White text */ 
+    position: relative;
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #444; 
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #bbb;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* General Section Styling */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #121212;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* Education Section */
+#education  {
+    background-color: #121212;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.education-item ,#experience-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateX(10px);    
+    background-color: #444;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.education-item .degree {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00b3b3;
+}
+
+.education-item .university {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.education-item .date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+/* Experience Item Styles */
+#experience{
+    background-color: #1c1c1c;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.experience-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.experience-item:hover {
+    transform: translateX(10px);
+    background-color: #444;
+}
+
+/* Experience Item Title */
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Experience Item Text */
+.experience-item p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Date Style */
+.experience-item .date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* List Style for Responsibilities/Tasks */
+.experience-item ul {
+    list-style-type: none; 
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.experience-item li {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+/* Section Title */
+#experience h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Adding a Small Spacer for Individual Items */
+.experience-item + .experience-item {
+    margin-top: 30px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .experience-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-item p {
+        font-size: 0.95rem;
+    }
+
+    .experience-item ul {
+        padding-left: 15px;
+    }
+
+    .experience-item li {
+        font-size: 0.95rem;
+    }
+
+    #experience h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Languages Section */
+#languages {
+    background-color: #121212;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.language-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language-item:hover {
+    transform: translateX(10px);    
+    background-color: #444;
+}
+
+.language-item .language-name {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.language-item .proficiency {
+    font-size: 1rem;
+    color: #bbb;
+    font-weight: 600;
+}
+
+/* Certificates Section */
+#certificates {
+    background-color: #1c1c1c;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.certificate-item {
+    background-color: #333;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateX(10px);    
+    background-color: #444;
+}
+
+.certificate-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.certificate-item p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.certificate-item .institution {
+    font-size: 1.1rem;
+    color: #00b3b3;
+    font-weight: 600;
+}
+
+.certificate-item .date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .education-item, .language-item, .certificate-item {
+        padding: 15px;
+    }
+
+    .education-item h3, .language-item .language-name, .certificate-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-item p, .language-item .proficiency, .certificate-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Languages Section */
+#languages {
+    background-color: #121212;
+} 
+#languages ul, #certificates ul{
+        list-style-type: none;
+}
+#languages ul li {
+    background-color: #333;
+    font-size: 1.1rem;
+    color: #ccc;
+    text-align: center;
+}
+
+
+
+#certificates  {
+    background-color: #121212;
+    padding: 50px 0;
+    color: #fff;
+    margin: 20px auto;
+}
+#certificates ul{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; 
+}
+#certificates ul li {
+   display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.5rem !important;
+    color: #bbb;
+    font-weight: 900;
+}
+
+#certificates ul li:hover{
+    background-color: #444; 
+    text-shadow:
+        0 0 4px #00b3b3,   /* Subtle cyan glow */
+        0 0 10px #00b3b3,  /* Cyan glow */
+        0 0 15px #00b3b3,  /* Stronger cyan glow */
+        0 0 30px #009999,  /* Deeper cyan glow */
+        0 0 40px #009999,  /* Stronger cyan */
+        0 0 50px #009999;  /* Intense neon cyan glow */
+}
+
+#certificates ul li:hover {
+    transform: translateX(10px);    
+    background-color: #444;
+} 
