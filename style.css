@@ -463,12 +463,12 @@ strong {
 }
 
 .experience-item:hover:nth-child(odd) {
-    transform: translateX(-10px);
+    transform: translateX(-30px);
     background-color: #444;
 }
 
 .experience-item:hover:nth-child(even) {
-    transform: translateX(10px);
+    transform: translateX(30px);
     background-color: #444;
 }
 
