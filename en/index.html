@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Behzodkhon Khamdamov">
+    <title>Behzod Khamdamov Portfolio</title>
+    <link rel="stylesheet" href="./../style.css">
+    <link rel="icon" href="./../favicon.ico">
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="/">
+                <img src="./../logo.png" alt="logo" height="40" wclass="logo">
+                <!-- <div class="logo">=&gt;XBM;</div> -->
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <div class="container">
+            <h1>I'm <span class="highlight">Behzod</span></h1>
+            <p>Dedicated to creating dynamic, user-friendly web solutions with a focus on quality and performance.</p>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item left">
+                <h3>Fullstack Developer at Asmo Clinic</h3>
+                <p><strong>2024</strong> | Remote, Uzbekistan</p>
+            </div>
+
+            <div class="experience-item right">
+                <h3>Frontend Developer at Asmo Clinic</h3>
+                <p><strong>2021-2022</strong> | Tashkent, Uzbekistan</p>
+            </div>
+
+            <div class="experience-item left">
+                <h3>Frontend Developer for 3D Artist Portfolio</h3>
+                <p><strong>2024</strong> | Remote, Romania</p>
+            </div>
+
+        </div>
+    </section>
+    d
+    <!-- Education -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Computer Science - Vistula University</h3>
+                <p><strong>2022 – 2024</strong> | Warsaw, Poland</p>
+            </div>
+            <div class="education-item">
+                <h3>Graduate of Academic Lyceum<br> Tashkent Institute of Architecture and Civil Engineering</h3>
+                <p><strong>2020 – 2022</strong> | Tashkent, Uzbekistan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2>Stack</h2>
+            <p>Here are some of my key skills:</p>
+            <div class="skills-grid">
+                <div class="skill">JavaScript</div>
+                <div class="skill">Node.js/Fastify/Express</div>
+                <div class="skill">Vue/Nuxt</div>
+                <div class="skill">Python</div>
+                <div class="skill">UI/UX Design</div>
+                <div class="skill">C/C++</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p> I’m a freelance web developer with experience in both front-end and back-end development. I work with
+                technologies like
+                JavaScript, Node.js, and React, and I focus on creating websites that are easy to use and work smoothly.
+
+                I’ve had the chance to work on a lot of different projects, from building websites to creating data
+                tools
+                and improving
+                SEO for small businesses. My main goal is to make sure my code is clean and efficient, while also making
+                sure the design
+                is user-friendly and looks great. I believe that combining good code with creative design is key to
+                delivering a great
+                experience for users.</p>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's connect. Send a message or reach out directly.</p>
+            <br>
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <a class="skill" href="mailto:kxamdamovv@gmail.com">
+                        <strong>Email:</strong> kxamdamovv@gmail.com
+                    </a>
+                    <a class="skill" href="https://github.com/BladeJoe" target="_blank">
+                        <strong>Github:</strong> BladeJoe
+                    </a>
+                    <a class="skill" href="https://t.me/Khamdamovv_B" target="_blank">
+                        <strong>Telegram:</strong> @Khamdamovv_B
+                    </a>
+                </div>
+
+
+
+
+                <div class="contact-form">
+                    <form name="contact" action="https://formspree.io/f/mwpkwjdv" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required="">
+                        <input type="email" name="email" placeholder="Your Email" required="">
+                        <textarea name="message" placeholder="Message" rows="5" required=""></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const lang = navigator.language || navigator.userLanguage;
+        console.log(lang);
+    </script>
+
+</body>
+
+</html>
