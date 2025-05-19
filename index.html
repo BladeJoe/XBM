@@ -5,7 +5,7 @@
             const country = (data.country || '').toUpperCase();
             const browserLang = (navigator.language || '').split('-')[0].toLowerCase();
 
-            const ruCountries = ['RU', 'BY', 'KZ', 'UA', 'UZ', 'TJ', 'TM', 'KG', 'MD']; // Russian-speaking + Central Asia
+            const ruCountries = ['RU', 'BY', 'KZ', 'UA', 'UZ', 'TJ', 'TM', 'KG', 'MD'];
             const lang = ruCountries.includes(country) ? 'ru' : 'en';
 
             if (!location.pathname.startsWith(`/${lang}/`))
