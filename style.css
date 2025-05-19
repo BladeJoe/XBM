@@ -146,14 +146,15 @@ a:hover {
 
 
 section:nth-child(even) {
-    background: gray;
+    background: #2a2a2a;
     height: calc(100vh - 60px);
 }
 
+/* 
 section:nth-child(2) {
     background-image: radial-gradient(circle 500px at 50% 50.2%, rgba(73, 76, 212, 1) 0.1%, rgba(3, 1, 50, 1) 100.2%);
     background-size: cover;
-}
+} */
 
 @media (max-width: 768px) {
     .navbar {
