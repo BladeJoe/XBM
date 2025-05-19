@@ -12,8 +12,8 @@
 
 <body>
     <!-- Navbar  -->
-    <nav class="navbar">
-        <div class="container flex ffr aic jcb">
+    <nav class="navbar flex jcc">
+        <div class="flex ffr aic jcb w-100" style="max-width: 1280px;">
 
             <!-- Logo -->
             <a href="/">
@@ -21,7 +21,7 @@
                 <!-- <div class="logo">=&gt;XBM;</div> -->
             </a>
 
-            <ul class="nav-links flex ffr" id="navLinks">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
@@ -42,12 +42,14 @@
 
 
     <!-- Home -->
-    <section id="home" class="home">
-        <div class="container flex jcc ffc gap-2 w-100">
-            <h1>I'm <span class="highlight">Behzod</span></h1>
-            <p>Dedicated to creating dynamic, user-friendly web solutions with a focus on quality and performance.</p>
+    <section id="home" class="home flex ffc aic">
+        <div class="container flex jcc ffc gap-2 w-100" style="position: relative;">
+            <h1>You found <span class="highlight">Behzod</span> — the web dev your project deserves.</h1>
+            <p>Building fast, reliable web apps that don’t suck, focused on performance, usability, and clean
+                architecture.</p>
         </div>
     </section>
+
 
     <!-- Professional Experience -->
     <section id="experience" class="section">
@@ -71,7 +73,7 @@
 
         </div>
     </section>
-    d
+
     <!-- Education -->
     <section id="education" class="section">
         <div class="container">
@@ -126,7 +128,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>Let's connect. Send a message or reach out directly.</p>
+            <p>Got a question or a project? Send a message — it actually works, and yes, I’ll reply.</p>
             <br>
             <div class="contact-grid">
                 <div class="contact-details">
@@ -134,26 +136,24 @@
                         <strong>Email:</strong> kxamdamovv@gmail.com
                     </a>
                     <a class="skill" href="https://github.com/BladeJoe" target="_blank">
-                        <strong>Github:</strong> BladeJoe
+                        <strong>GitHub:</strong> BladeJoe
                     </a>
                     <a class="skill" href="https://t.me/Khamdamovv_B" target="_blank">
                         <strong>Telegram:</strong> @Khamdamovv_B
                     </a>
                 </div>
 
-
-
-
                 <div class="contact-form">
                     <form name="contact" action="https://formspree.io/f/mwpkwjdv" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required="">
-                        <input type="email" name="email" placeholder="Your Email" required="">
-                        <textarea name="message" placeholder="Message" rows="5" required=""></textarea>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         <button type="submit" class="btn">Send</button>
                     </form>
                 </div>
             </div>
         </div>
+
     </section>
 
     <script>
@@ -195,6 +195,24 @@
             window.addEventListener('scroll', makeNavActive);
             makeNavActive();
         });
+        const directions = ['fade-up', 'fade-down', 'fade-left', 'fade-right'];
+
+        function animateWords(selector) {
+            const element = document.querySelector(selector);
+            if (!element) return;
+
+            const words = element.textContent.trim().split(/\s+/);
+            element.innerHTML = words
+                .map((word, i) => {
+                    const dir = directions[i % directions.length];
+                    return `<span class="word ${dir}" style="animation-delay: ${i * 0.1}s">${word}</span>`;
+                })
+                .join(' ');
+        }
+
+        animateWords('h1');
+        animateWords('p');
+
     </script>
 </body>
 
