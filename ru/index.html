@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Профессиональное портфолио Бехзодахон Хамдамова">
     <title>Бехзод Хамдамов</title>
+    <link rel="stylesheet" href="./../lns.css">
     <link rel="stylesheet" href="./../style.css">
     <link rel="icon" href="./../favicon.ico">
 </head>
 
 <body>
     <!-- Навигация -->
-    <nav class="navbar">
-        <div class="flex ffr aic jcb">
+    <nav class="navbar flex jcc w-100">
+        <div class="navbar-container flex ffr aic jcb w-100" style="max-width: 1280px;">
 
             <!-- Logo -->
             <a href="/">
                 <img src="./../logo.png" alt="logo" height="40" wclass="logo">
                 <!-- <div class="logo">=&gt;XBM;</div> -->
             </a>
+
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -27,7 +29,7 @@
                 <li><a href="#skills">Stack</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="../en/">🌐en</a></li>
+                <li><a href="../en/">🌐EN</a></li>
             </ul>
 
             <!-- Burger Menu -->
@@ -41,8 +43,8 @@
 
 
     <!-- Главная -->
-    <section id="home" class="home flex ffc aic">
-        <div class="container flex jcc ffc gap-2 w-100">
+    <section id="home" class="home flex fdc aic">
+        <div class="container flex jcc fdc gap-2 w-100">
             <h1>Я <span class="highlight">Бехзод</span></h1>
             <p>Делаю быстрые, удобные веб-приложения, которые не лагают и не бесят.</p>
         </div>
@@ -152,45 +154,7 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            const sections = document.querySelectorAll('section');
-            const navItems = document.querySelectorAll('.nav-links li a');
-
-            // Toggle hamburger menu
-            hamburger.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-
-
-            // Add active class based on scroll position
-            const makeNavActive = () => {
-                let scrollY = window.scrollY;
-
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop - 60; // Adjust for header height
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-
-                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                        navItems.forEach((item) => {
-                            item.classList.remove('active');
-                            item.removeAttribute('onclick'); // Make other links clickable
-                        });
-                        const activeLink = document.querySelector(`.nav-links li a[href="#${sectionId}"]`);
-                        activeLink.classList.add('active');
-                        activeLink.setAttribute('onclick', 'return false'); // Make the active link unclickable
-                    }
-                });
-            };
-
-            // Call on scroll and page load
-            window.addEventListener('scroll', makeNavActive);
-            makeNavActive();
-        });
+    <script src="./../script.js">
     </script>
 </body>
 
