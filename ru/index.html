@@ -1,160 +1,210 @@
 <!DOCTYPE html>
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Профессиональное портфолио Бехзодахон Хамдамова">
-    <title>Бехзод Хамдамов</title>
-    <link rel="stylesheet" href="./../lns.css">
-    <link rel="stylesheet" href="./../style.css">
-    <link rel="icon" href="./../favicon.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Профессиональное портфолио Бехзода Хамдамова — Fullstack разработчик" />
+    <meta name="author" content="Бехзод Хамдамов" />
+    <meta property="og:title" content="Портфолио Бехзода Хамдамова" />
+    <meta property="og:description" content="Создаю быстрые и надежные веб-приложения с чистой архитектурой." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/ru/" />
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+    <title>Портфолио Бехзод Хамдамов</title>
+    <link rel="preload" href="./../lns.css" as="style" />
+    <link rel="preload" href="./../style.css" as="style" />
+    <link rel="stylesheet" href="./../lns.css" />
+    <link rel="stylesheet" href="./../style.css" />
+    <link rel="icon" href="./../favicon.ico" />
 </head>
 
 <body>
-    <!-- Навигация -->
-    <nav class="navbar flex jcc w-100">
-        <div class="navbar-container flex ffr aic jcb w-100" style="max-width: 1280px;">
-
-            <!-- Logo -->
-            <a href="/">
-                <img src="./../logo.png" alt="logo" height="40" wclass="logo">
-                <!-- <div class="logo">=&gt;XBM;</div> -->
+    <nav class="navbar flex jcc w-100" role="navigation" aria-label="Основная навигация">
+        <div class="navbar-container flex ffr aic jcb w-100">
+            <a href="#home" class="logo-link" aria-label="Перейти на главную страницу">
+                <img src="./../logo.png" alt="Логотип Бехзод Хамдамов" height="28" class="logo" />
             </a>
 
+            <button id="hamburger" class="hamburger" aria-controls="navLinks" aria-expanded="false"
+                aria-label="Переключить меню навигации">
+                <span></span><span></span><span></span>
+            </button>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Stack</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="../en/">🌐EN</a></li>
+            <ul class="nav-links" id="navLinks" role="menu">
+                <li role="none"><a href="#home" role="menuitem" tabindex="0">Главная</a></li>
+                <li role="none"><a href="#experience" role="menuitem" tabindex="0">Опыт работы</a></li>
+                <li role="none"><a href="#education" role="menuitem" tabindex="0">Образование</a></li>
+                <li role="none"><a href="#skills" role="menuitem" tabindex="0">Навыки</a></li>
+                <li role="none"><a href="#about" role="menuitem" tabindex="0">Обо мне</a></li>
+                <li role="none"><a href="#contact" role="menuitem" tabindex="0">Контакты</a></li>
+                <li role="none"><a href="../en/" role="menuitem" tabindex="0"
+                        aria-label="Переключиться на английскую версию">🇺🇸 English</a></li>
             </ul>
-
-            <!-- Burger Menu -->
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </div>
     </nav>
 
-
-    <!-- Главная -->
-    <section id="home" class="home flex fdc aic">
-        <div class="container flex jcc fdc gap-2 w-100">
-            <h1>Я <span class="highlight">Бехзод</span></h1>
-            <p>Делаю быстрые, удобные веб-приложения, которые не лагают и не бесят.</p>
-        </div>
-    </section>
-
-    <!-- Профессиональный опыт -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Профессиональный опыт</h2>
-
-            <div class="experience-item left">
-                <h3>Fullstack-разработчик в Asmo Clinic</h3>
-                <p><strong>2024</strong> | Удалённо, Узбекистан</p>
+    <main>
+        <section id="home" class="home flex fdc aic" tabindex="-1">
+            <div class="container flex jcc fdc gap-2 w-100">
+                <h1>Вы нашли <span class="highlight">Бехзода</span> — веб-разработчика, которого заслуживает ваш проект.
+                </h1>
+                <p>Создаю быстрые, надежные веб-приложения с акцентом на производительность, удобство и чистую
+                    архитектуру.</p>
             </div>
+        </section>
 
-            <div class="experience-item right">
-                <h3>Frontend-разработчик в Asmo Clinic</h3>
-                <p><strong>2021-2022</strong> | Ташкент, Узбекистан</p>
+        <section id="experience" class="section" tabindex="-1">
+            <div class="container">
+                <h2>Опыт работы</h2>
+                <article class="experience-item left">
+                    <h3>Fullstack разработчик в Asmo Clinic</h3>
+                    <time datetime="2024">2024</time> | Удалённо, Узбекистан
+                </article>
+                <article class="experience-item right">
+                    <h3>Frontend разработчик в Asmo Clinic</h3>
+                    <time datetime="2021">2021</time>–<time datetime="2022">2022</time> | Ташкент, Узбекистан
+                </article>
+                <article class="experience-item left">
+                    <h3>Frontend разработчик портфолио 3D-художника</h3>
+                    <time datetime="2024">2024</time> | Удалённо, Румыния
+                </article>
             </div>
+        </section>
 
-            <div class="experience-item left">
-                <h3>Frontend-разработчик портфолио 3D-художника</h3>
-                <p><strong>2024</strong> | Удалённо, Румыния</p>
+        <section id="education" class="section" tabindex="-1">
+            <div class="container">
+                <h2>Образование</h2>
+                <article class="education-item">
+                    <h3>Бакалавр компьютерных наук — Университет Вистула</h3>
+                    <time datetime="2022">2022</time>–<time datetime="2024">2024</time> | Варшава, Польша
+                </article>
+                <article class="education-item">
+                    <h3>Выпускник Академического лицея<br>Ташкентский институт архитектуры и строительства</h3>
+                    <time datetime="2020">2020</time>–<time datetime="2022">2022</time> | Ташкент, Узбекистан
+                </article>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- Образование -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Образование</h2>
-            <div class="education-item">
-                <h3>Бакалавр компьютерных наук — Университет Вистула</h3>
-                <p><strong>2022 – 2024</strong> | Варшава, Польша</p>
-            </div>
-            <div class="education-item">
-                <h3>Выпускник Академического лицея<br> Ташкентский институт архитектуры и гражданского строительства
-                </h3>
-                <p><strong>2020 – 2022</strong> | Ташкент, Узбекистан</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Навыки -->
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2>Навыки</h2>
-            <p>Некоторые из моих ключевых навыков:</p>
-            <div class="skills-grid">
-                <div class="skill">JavaScript</div>
-                <div class="skill">Node.js/Fastify/Express</div>
-                <div class="skill">Vue/Nuxt</div>
-                <div class="skill">Python</div>
-                <div class="skill">UI/UX Дизайн</div>
-                <div class="skill">C/C++</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Обо мне -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Обо мне</h2>
-            <p>Я — фриланс веб-разработчик с опытом работы как в frontend, так и в backend. Работаю с технологиями
-                такими как
-                JavaScript, Node.js и React, фокусируюсь на создании сайтов, которые просты в использовании и работают
-                плавно.
-
-                Мне довелось поработать над множеством проектов — от создания сайтов до разработки инструментов для
-                работы с данными
-                и улучшения SEO для малого бизнеса. Моя главная цель — писать чистый и эффективный код, при этом
-                заботясь о
-                удобстве и привлекательности дизайна. Я считаю, что сочетание хорошего кода и креативного дизайна —
-                ключ к отличному
-                пользовательскому опыту.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section section-dark">
-        <div class="container">
-            <h2>Контакты</h2>
-            <p>Давайте свяжемся. Отправьте сообщение или свяжитесь напрямую.</p>
-            <br>
-            <div class="contact-grid">
-                <div class="contact-details">
-                    <a class="skill" href="mailto:kxamdamovv@gmail.com">
-                        <strong>Эл. почта:</strong> kxamdamovv@gmail.com
-                    </a>
-                    <a class="skill" href="https://github.com/BladeJoe" target="_blank">
-                        <strong>Github:</strong> BladeJoe
-                    </a>
-                    <a class="skill" href="https://t.me/Khamdamovv_B" target="_blank">
-                        <strong>Telegram:</strong> @Khamdamovv_B
-                    </a>
+        <section id="skills" class="section" tabindex="-1">
+            <div class="container">
+                <h2>Навыки</h2>
+                <p>Основные технологии и инструменты:</p>
+                <div class="skills-grid" role="list">
+                    <div class="skill" role="listitem">JavaScript</div>
+                    <div class="skill" role="listitem">Node.js/Fastify/Express</div>
+                    <div class="skill" role="listitem">Vue/Nuxt</div>
+                    <div class="skill" role="listitem">Python</div>
+                    <div class="skill" role="listitem">UI/UX Дизайн</div>
+                    <div class="skill" role="listitem">C/C++</div>
                 </div>
+            </div>
+        </section>
 
-                <div class="contact-form">
-                    <form name="contact" action="https://formspree.io/f/mwpkwjdv" method="POST">
-                        <input type="text" name="name" placeholder="Ваше имя" required="">
-                        <input type="email" name="email" placeholder="Ваш email" required="">
-                        <textarea name="message" placeholder="Сообщение" rows="5" required=""></textarea>
+        <section id="about" class="section" tabindex="-1">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <p class="about-text">Я — фриланс веб-разработчик с опытом фронтенд и бэкенд разработки на JavaScript,
+                    Node.js и React. Создаю быстрые, доступные и адаптивные сайты с акцентом на чистый код и удобный
+                    пользовательский опыт. Работал над полными стек-приложениями, SEO и улучшением UI-дизайна.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section" tabindex="-1">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Есть вопросы или проект? Напишите — я отвечаю, да.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-details" role="list">
+                        <a class="socials" href="mailto:kxamdamovv@gmail.com" role="listitem"
+                            aria-label="Почта kxamdamovv собачка gmail точка com">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"
+                                    fill="#fff" />
+                            </svg>
+                            <strong>Email:</strong> kxamdamovv@gmail.com
+                        </a>
+                        <a class="socials" href="https://github.com/BladeJoe" target="_blank" role="listitem"
+                            aria-label="Github BladeJoe">
+                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.358 2.145a8.2 8.2 0 0 0-3.716 0c-.706-.433-1.245-.632-1.637-.716a2.2 2.2 0 0 0-.51-.053 1.3 1.3 0 0 0-.232.028l-.01.002-.004.002h-.003l.137.481-.137-.48a.5.5 0 0 0-.32.276 3.12 3.12 0 0 0-.159 2.101A3.35 3.35 0 0 0 2 5.93c0 1.553.458 2.597 1.239 3.268.547.47 1.211.72 1.877.863a2.3 2.3 0 0 0-.116.958v.598c-.407.085-.689.058-.89-.008-.251-.083-.444-.25-.629-.49a5 5 0 0 1-.27-.402l-.057-.093a9 9 0 0 0-.224-.354c-.19-.281-.472-.633-.928-.753l-.484-.127-.254.968.484.127c.08.02.184.095.355.346a7 7 0 0 1 .19.302l.068.11c.094.152.202.32.327.484.253.33.598.663 1.11.832.35.116.748.144 1.202.074V14.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-3.562c0-.316-.014-.605-.103-.874.663-.14 1.322-.39 1.866-.86.78-.676 1.237-1.73 1.237-3.292v-.001a3.35 3.35 0 0 0-.768-2.125 3.12 3.12 0 0 0-.159-2.1.5.5 0 0 0-.319-.277l-.137.48c.137-.48.136-.48.135-.48l-.002-.001-.004-.002-.009-.002-.075-.015a1 1 0 0 0-.158-.013 2.2 2.2 0 0 0-.51.053c-.391.084-.93.283-1.636.716"
+                                    fill="#fff" />
+                            </svg>
+                            <strong>Github:</strong> BladeJoe
+                        </a>
+                        <a class="socials" href="https://t.me/Khamdamovv_B" target="_blank" role="listitem"
+                            aria-label="Telegram @Khamdamovv_B">
+                            <svg width="20" height="20" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 1.5L0.5 6.5L4.5 8.5L10.5 4.5L6.5 9.5L12.5 13.5L14.5 1.5Z"
+                                    stroke="#fff" />
+                            </svg>
+                            <strong>Telegram:</strong> @Khamdamovv_B
+                        </a>
+                    </div>
+
+                    <form name="contact" action="https://formspree.io/f/mwpkwjdv" method="POST" class="contact-form"
+                        aria-label="Контактная форма">
+                        <input type="text" name="name" placeholder="Ваше имя" required aria-required="true" />
+                        <input type="email" name="email" placeholder="Электронная почта" required
+                            aria-required="true" />
+                        <textarea name="message" placeholder="Сообщение" rows="4" required
+                            aria-required="true"></textarea>
                         <button type="submit" class="btn">Отправить</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <script src="./../script.js">
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.setAttribute('aria-expanded', false);
+                navLinks.classList.remove('active');
+            });
+        });
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    document.querySelectorAll('section').forEach(section => {
+                        const top = section.offsetTop - 60;
+                        const height = section.offsetHeight;
+                        const id = section.id;
+                        if (scrollY >= top && scrollY < top + height) {
+                            document.querySelectorAll('#navLinks a').forEach(link => {
+                                link.classList.remove('active');
+                                link.removeEventListener('click', preventClick);
+                            });
+                            const activeLink = document.querySelector(`#navLinks a[href="#${id}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                                activeLink.addEventListener('click', preventClick);
+                            }
+                        }
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        function preventClick(e) {
+            e.preventDefault();
+        }
     </script>
 </body>
 

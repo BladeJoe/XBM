@@ -36,6 +36,19 @@ a:hover,
         0 0 4px var(--highlight-soft);
 }
 
+
+h1 {
+    letter-spacing: -5px;
+}
+
+h2 {
+    letter-spacing: -2px;
+}
+
+p {
+    letter-spacing: 5px;
+}
+
 input,
 textarea {
     padding: 8px 16px;
@@ -56,6 +69,7 @@ textarea {
     height: 100vh;
     background: radial-gradient(circle 400px at 50% 50.2%, #494cd4 0.1%, #030132 100.2%) !important;
     background-size: cover;
+    color: var(--text-light);
 }
 
 .section {
@@ -192,14 +206,14 @@ section:nth-child(even) {
 
 .skill {
     height: 80px;
-    background-color: var(--skill-bg);
+    background-color: var(--text-light);
+    color: var(--secondary-bg);
     padding: 16px 20px;
     border-radius: 12px;
     font-weight: 600;
     text-align: center;
     display: flex;
     justify-content: center;
-    outline: 2px solid var(--skill-outline);
     align-items: center;
     text-transform: uppercase;
     font-size: clamp(0.85rem, 2vw, 1.1rem);
@@ -209,6 +223,7 @@ section:nth-child(even) {
 }
 
 .skill:hover {
+    color: var(--highlight-soft);
     transform: translateY(-4px);
     box-shadow:
         0 0 2px var(--highlight),

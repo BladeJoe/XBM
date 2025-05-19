@@ -37,22 +37,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', makeNavActive);
     makeNavActive();
 });
-
-
-const directions = ['fade-up', 'fade-down', 'fade-left', 'fade-right'];
-
-function animateWords(selector) {
-    const element = document.querySelector(selector);
-    if (!element) return;
-
-    const words = element.textContent.trim().split(/\s+/);
-    element.innerHTML = words
-        .map((word, i) => {
-            const dir = directions[i % directions.length];
-            return `<span class="word ${dir}" style="animation-delay: ${i * 0.1}s">${word}</span>`;
-        })
-        .join(' ');
-}
-
-animateWords('h1');
-animateWords('p');
