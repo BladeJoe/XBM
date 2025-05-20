@@ -1,6 +1,6 @@
 :root {
     --primary-bg: #b4bec6;
-    --secondary-bg: #030132;
+    --secondary-bg: #01001d;
     --text-light: #d6e3ed;
     --text-dark: #0a0a0a;
     --navbar-bg: #0a0a0a;
@@ -68,7 +68,7 @@ textarea {
 
 .home {
     height: 100vh;
-    background: radial-gradient(circle 400px at 50% 50.2%, #494cd4 0.1%, #030132 100.2%) !important;
+    background: radial-gradient(circle 250px at 50% 50.2%, #494cd4 0.1%, #030132 100.2%) !important;
     background-size: cover;
     color: var(--text-light);
 }
@@ -80,14 +80,14 @@ textarea {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
     background: var(--secondary-bg);
     color: var(--text-light);
 }
 
 .container {
-    margin: auto;
     max-width: 1280px;
+    margin: auto;
     width: 100%;
     padding: 10px 20px;
 }
@@ -115,7 +115,7 @@ section:nth-child(even) {
 }
 
 .hamburger div {
-    margin: 5px 0;
+    margin: 3px 0;
     background-color: white;
     width: 25px;
     height: 3px;
@@ -152,7 +152,11 @@ section:nth-child(even) {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        border: none;
+        outline: none;
     }
 
     .nav-links {
@@ -185,7 +189,7 @@ section:nth-child(even) {
 }
 
 .hamburger.active div:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 7px);
 }
 
 .hamburger.active div:nth-child(2) {
@@ -193,7 +197,7 @@ section:nth-child(even) {
 }
 
 .hamburger.active div:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .skills-grid {
@@ -244,16 +248,29 @@ section:nth-child(even) {
 }
 
 .contact-grid {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-details,
 .contact-form {
-    flex: 1 1 300px;
-    min-width: 280px;
+    flex: 1 1 400px;
+    margin: auto;
+    width: 400px;
+    height: 250px;
+}
+
+.contact-form {
+    background: var(--secondary-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-details a {
@@ -269,13 +286,14 @@ section:nth-child(even) {
 
 .contact-form form {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
     background: var(--primary-bg);
+    border-radius: 12px;
     border: 1.5px solid transparent;
     color: var(--text-dark);
     font-weight: 600;
@@ -291,18 +309,8 @@ section:nth-child(even) {
     color: var(--secondary-bg);
 }
 
-.contact-form {
-    background: var(--secondary-bg);
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    color: var(--text-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.contact-form button.btn {
+.contact-form .btn {
     background: var(--highlight);
     color: var(--secondary-bg);
     font-weight: 900;
@@ -311,19 +319,21 @@ section:nth-child(even) {
     border-radius: 8px;
 }
 
-.contact-form button.btn:hover {
+.contact-form .btn:hover {
     background: var(--highlight-alt);
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
+    padding: 1.5rem 2rem;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 8px;
 }
 
 .socials {
-    padding: 16px 8px;
+    padding: 12px 4px;
+    margin: 0;
     border-radius: 12px;
     color: var(--text-light);
     background-color: var(--secondary-bg);

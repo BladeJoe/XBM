@@ -12,23 +12,30 @@
     <meta property="og:url" content="https://yourdomain.com/" />
     <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
     <title>Behzod Khamdamov Portfolio</title>
-    <link rel="preload" href="./../lns.css" as="style" />
+    <link rel="preload" href="./../lns.min.css" as="style" onerror="this.href='./../lns.css'" />
+    <link rel="stylesheet" href="./../lns.min.css" onerror="this.href='./../lns.css'" />
+
     <link rel="preload" href="./../style.css" as="style" />
-    <link rel="stylesheet" href="./../lns.css" />
     <link rel="stylesheet" href="./../style.css" />
     <link rel="icon" href="./../favicon.ico" />
 </head>
 
 <body>
-    <nav class="navbar flex jcc w-100" role="navigation" aria-label="Primary Navigation">
-        <div class="navbar-container flex ffr aic jcb w-100">
+    <span
+        class="flex flex-inline fdr fdc aic ais aie jcc jcs jce jcb jca jcevn acs ace acc acsb acsa fww fwn fwwr fg1 fg0 fs0 fs1 f1 w5 w10 w15 w20 w25 w30 w35 w40 w45 w50 w55 w60 w65 w70 w75 w80 w85 w90 w95 w100 m1 m2 m3 m4 m5 mt1 mt2 mt3 mt4 mt5 mb1 mb2 mb3 mb4 mb5 ml1 ml2 ml3 ml4 ml5 mr1 mr2 mr3 mr4 mr5 mx1 mx2 mx3 mx4 mx5 my1 my2 my3 my4 my5 mx-auto my-auto p1 p2 p3 p4 p5 pt1 pt2 pt3 pt4 pt5 pb1 pb2 pb3 pb4 pb5 pl1 pl2 pl3 pl4 pl5 pr1 pr2 pr3 pr4 pr5 px1 px2 px3 px4 px5 py1 py2 py3 py4 py5 gap1 gap2 gap3 gap4 gap5 nowrap truncate fadeup fadedown fadeleft faderight d-block d-inline d-inline-block d-none hidden visible opacity50 absolute relative z1 z2 z3 z4 z5 z6 z7 z8 z9 z10 rnd rndfull border fw100 fw200 fw300 fw400 fw500 fw600 fw700 fw800 fw900"
+        style="display:none !important"></span>
+
+    <nav class="navbar" role="navigation" aria-label="Primary Navigation">
+        <div class="navbar-container flex ffr aic jcb w100 mx-auto">
             <a href="#home" class="logo-link" aria-label="Go to home">
                 <img src="./../logo.png" alt="Behzod Khamdamov Logo" height="28" class="logo" />
             </a>
 
-            <button id="hamburger" class="hamburger" aria-controls="navLinks" aria-expanded="false"
+            <button id="hamburger" class="hamburger " aria-controls="navLinks" aria-expanded="false"
                 aria-label="Toggle navigation menu">
-                <span></span><span></span><span></span>
+                <div></div>
+                <div></div>
+                <div></div>
             </button>
 
             <ul class="nav-links" id="navLinks" role="menu">
@@ -45,11 +52,11 @@
     </nav>
 
     <main>
-        <section id="home" class="home flex fdc aic" tabindex="-1">
-            <div class="container flex jcc fdc gap-2 w-100">
-                <h1 class="fade-up">You found <span class="highlight">Behzod</span> - the web dev your project
+        <section id="home" class="home w flex fdc aic" tabindex="-1">
+            <div class="container flex jcc fdc gap2">
+                <h1 class="fadeup">You found <span class="highlight">Behzod</span> - the web dev your project
                     deserves.</h1>
-                <p class="fade-down">Building fast, reliable web apps that don`t suck, focused on performance,
+                <p class="fadedown">Building fast, reliable web apps that don`t suck, focused on performance,
                     usability, and clean
                     architecture.</p>
             </div>
@@ -58,29 +65,34 @@
         <section id="experience" class="section" tabindex="-1">
             <div class="container">
                 <h2>Professional Experience</h2>
-                <article class="experience-item left">
+                <div class="experience-item mb5">
                     <h3>Fullstack Developer at Asmo Clinic</h3>
+                    <a href="https:/www.asmoclinic.uz" class="reference">🔗asmoclinic.uz</a>
                     <time datetime="2024">2024</time> | Remote, Uzbekistan
-                </article>
-                <article class="experience-item right">
+                </div>
+                <div class="experience-item mb5">
                     <h3>Frontend Developer at Asmo Clinic</h3>
+                    <a href="https:/www.asmoclinic.uz" class="reference">🔗asmoclinic.uz</a>
                     <time datetime="2021">2021</time>-<time datetime="2022">2022</time> | Tashkent, Uzbekistan
-                </article>
-                <article class="experience-item left">
+
+                </div>
+                <div class="experience-item mb5">
                     <h3>Frontend Developer for 3D Artist Portfolio</h3>
+                    <a href="https:/www.dm20.net" class="reference">🔗dm20.net</a>
                     <time datetime="2024">2024</time> | Remote, Romania
-                </article>
+
+                </div>
             </div>
         </section>
 
         <section id="education" class="section" tabindex="-1">
             <div class="container">
                 <h2>Education</h2>
-                <article class="education-item">
+                <article class="education-item mb5">
                     <h3>Bachelor of Computer Science - Vistula University</h3>
                     <time datetime="2022">2022</time>-<time datetime="2024">2024</time> | Warsaw, Poland
                 </article>
-                <article class="education-item">
+                <article class="education-item mb5">
                     <h3>Graduate of Academic Lyceum<br>Tashkent Institute of Architecture and Civil Engineering</h3>
                     <time datetime="2020">2020</time>-<time datetime="2022">2022</time> | Tashkent, Uzbekistan
                 </article>
@@ -90,13 +102,12 @@
         <section id="skills" class="section" tabindex="-1">
             <div class="container">
                 <h2>Stack</h2>
-                <p>Here are some of my key skills:</p>
                 <div class="skills-grid" role="list">
-                    <div class="skill" role="listitem">JavaScript</div>
                     <div class="skill" role="listitem">Node.js/Fastify/Express</div>
                     <div class="skill" role="listitem">Vue/Nuxt</div>
-                    <div class="skill" role="listitem">Python</div>
+                    <div class="skill" role="listitem">JavaScript</div>
                     <div class="skill" role="listitem">UI/UX Design</div>
+                    <div class="skill" role="listitem">Python</div>
                     <div class="skill" role="listitem">C/C++</div>
                 </div>
             </div>
@@ -105,8 +116,9 @@
         <section id="about" class="section" tabindex="-1">
             <div class="container">
                 <h2>About Me</h2>
-                <p class="about-text">I`m a freelance web developer with experience in front-end and back-end using
-                    JavaScript, Node.js, and React. I build fast, accessible, and responsive websites focused on clean
+                <p class="about-text mxauto w80">I`m a freelance web developer with experience in front-end and back-end
+                    using
+                    JavaScript, Node.js, and Nuxtjs. I build fast, accessible, and responsive websites focused on clean
                     code and smooth user experience. I`ve worked on everything from full-stack apps to SEO fixes and UI
                     design improvements.</p>
             </div>
@@ -115,10 +127,10 @@
         <section id="contact" class="section" tabindex="-1">
             <div class="container">
                 <h2>Contact</h2>
-                <p>Got a question or a project? Send a message - it actually works, and yes, I`ll reply.</p>
+                <p>Got a question or a project? Send a message - it actually works, and yes, I`ll follow up.</p>
 
                 <div class="contact-grid">
-                    <div class="contact-details" role="list">
+                    <div class="contact-details flex jca" role="list">
                         <a class="socials" href="mailto:kxamdamovv@gmail.com" role="listitem"
                             aria-label="Email kxamdamovv at gmail dot com">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="white"
@@ -143,8 +155,7 @@
                             aria-label="Telegram @Khamdamovv_B">
                             <svg width="20" height="20" viewBox="0 0 15 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.5 1.5L0.5 6.5L4.5 8.5L10.5 4.5L6.5 9.5L12.5 13.5L14.5 1.5Z"
-                                    stroke="#fff" />
+                                <path d="M14.5 1.5L0.5 6.5L4.5 8.5L10.5 4.5L6.5 9.5L12.5 13.5L14.5 1.5Z" fill="#fff" />
                             </svg>
                             <strong>Telegram:</strong> @Khamdamovv_B
                         </a>
@@ -154,7 +165,7 @@
                         aria-label="Contact form">
                         <input type="text" name="name" placeholder="Your Name" required aria-required="true" />
                         <input type="email" name="email" placeholder="Email" required aria-required="true" />
-                        <textarea name="message" placeholder="Message" rows="4" required
+                        <textarea name="message" placeholder="Message" rows="2" required
                             aria-required="true"></textarea>
                         <button type="submit" class="btn">Send</button>
                     </form>
