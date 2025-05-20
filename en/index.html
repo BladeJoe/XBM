@@ -9,8 +9,8 @@
     <meta property="og:title" content="Behzod Khamdamov Portfolio" />
     <meta property="og:description" content="Building fast, reliable web apps with clean architecture." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+    <meta property="og:url" content="https://xbm.netlify.app/" />
+    <meta property="og:image" content="https://xbm.netlify.app/favicon.ico" />
     <title>Behzod Khamdamov Portfolio</title>
     <link rel="preload" href="./../lns.min.css" as="style" onerror="this.href='./../lns.css'" />
     <link rel="stylesheet" href="./../lns.min.css" onerror="this.href='./../lns.css'" />
@@ -18,6 +18,11 @@
     <link rel="preload" href="./../style.css" as="style" />
     <link rel="stylesheet" href="./../style.css" />
     <link rel="icon" href="./../favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -53,17 +58,17 @@
 
     <main>
         <section id="home" class="home w flex fdc aic" tabindex="-1">
-            <div class="container flex jcc fdc gap2">
-                <h1 class="fadeup">You found <span class="highlight">Behzod</span> - the web dev your project
+            <div data-aos="fade-up" class="container flex jcc fdc gap2">
+                <h1>You found <span class="highlight">Behzod</span> - the web dev your project
                     deserves.</h1>
-                <p class="fadedown">Building fast, reliable web apps that don`t suck, focused on performance,
+                <p>Building fast, reliable web apps that don`t suck, focused on performance,
                     usability, and clean
                     architecture.</p>
             </div>
         </section>
 
         <section id="experience" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-left" class="container">
                 <h2>Professional Experience</h2>
                 <div class="experience-item mb5">
                     <h3>Fullstack Developer at Asmo Clinic</h3>
@@ -86,7 +91,7 @@
         </section>
 
         <section id="education" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-right" class="container">
                 <h2>Education</h2>
                 <article class="education-item mb5">
                     <h3>Bachelor of Computer Science - Vistula University*</h3>
@@ -100,7 +105,7 @@
         </section>
 
         <section id="skills" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <h2>Stack</h2>
                 <div class="skills-grid" role="list">
                     <div class="skill" role="listitem">Node.js/Fastify/Express</div>
@@ -114,7 +119,7 @@
         </section>
 
         <section id="about" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-right" class="container">
                 <h2>About Me</h2>
                 <p class="about-text mxauto w80">I`m a freelance web developer with experience in front-end and back-end
                     using
@@ -125,7 +130,7 @@
         </section>
 
         <section id="contact" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-left" class="container">
                 <h2>Contact</h2>
                 <p>Got a question or a project? Send a message, it actually works, and yes I`ll follow up.</p>
 
@@ -173,6 +178,9 @@
             </div>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./../script.js"></script>
 </body>

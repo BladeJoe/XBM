@@ -9,14 +9,18 @@
     <meta property="og:title" content="Портфолио Behzod Khamdamov" />
     <meta property="og:description" content="Создаю быстрые, надежные веб приложения с чистой архитектурой." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+    <meta property="og:url" content="https://xbm.netlify.app/" />
+    <meta property="og:image" content="https://xbm.netlify.app/favicon.ico" />
     <title>Портфолио Behzod Khamdamov</title>
     <link rel="preload" href="./../lns.min.css" as="style" onerror="this.href='./../lns.css'" />
     <link rel="stylesheet" href="./../lns.min.css" onerror="this.href='./../lns.css'" />
     <link rel="preload" href="./../style.css" as="style" />
     <link rel="stylesheet" href="./../style.css" />
     <link rel="icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -52,16 +56,16 @@
 
     <main>
         <section id="home" class="home w flex fdc aic" tabindex="-1">
-            <div class="container flex jcc fdc gap2">
-                <h1 class="fadeup">Вы нашли <span class="highlight">Behzod</span> - веб рaзработчика, которого
+            <div data-aos="fade-up" class="container flex jcc fdc gap2">
+                <h1>Вы нашли <span class="highlight">Behzod</span> - веб рaзработчика, которого
                     заслуживает ваш проект.</h1>
-                <p class="fadedown">Создаю быстрые, надежные веб приложения, которые не отстой, с упором на
+                <p>Создаю быстрые, надежные веб приложения, которые не отстой, с упором на
                     производительность, удобство и чистую архитектуру.</p>
             </div>
         </section>
 
         <section id="experience" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-right" class="container">
                 <h2>Профессиональный опыт</h2>
                 <div class="experience-item mb5">
                     <h3>Fullstack разработчик в Asmo Clinic</h3><a href="https://asmoclinic.uz"
@@ -82,7 +86,7 @@
         </section>
 
         <section id="education" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-left" class="container">
                 <h2>Образование</h2>
                 <article class="education-item mb5">
                     <h3>Бакалавр компьютерных наук - Университет Вистулы*</h3>
@@ -97,7 +101,7 @@
         </section>
 
         <section id="skills" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <h2>Стек</h2>
                 <div class="skills-grid" role="list">
                     <div class="skill" role="listitem">Node.js/Fastify/Express</div>
@@ -111,7 +115,7 @@
         </section>
 
         <section id="about" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-left" class="container">
                 <h2>Обо мне</h2>
                 <p class="about-text mxauto w80">Я фрилансер веб разработчик с опытом работы во фронтенде и бэкенде,
                     использую JavaScript, Node.js и Nuxtjs. Создаю быстрые, доступные и адаптивные сайты с чистым кодом
@@ -120,7 +124,7 @@
         </section>
 
         <section id="contact" class="section" tabindex="-1">
-            <div class="container">
+            <div data-aos="fade-right" class="container">
                 <h2>Контакты</h2>
                 <p>Есть вопрос или проект? Напишите, я реально отвечаю.</p>
 
@@ -168,6 +172,10 @@
             </div>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="./../script.js"></script>
 </body>
 
