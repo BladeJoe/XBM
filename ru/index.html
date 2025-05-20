@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Профессиональное портфолио Бехзода Хамдамова — Fullstack разработчик" />
+    <meta name="description" content="Профессиональное портфолио Бехзода Хамдамова - Fullstack разработчик" />
     <meta name="author" content="Бехзод Хамдамов" />
     <meta property="og:title" content="Портфолио Бехзода Хамдамова" />
     <meta property="og:description" content="Создаю быстрые и надежные веб-приложения с чистой архитектурой." />
@@ -39,7 +39,7 @@
                 <li role="none"><a href="#about" role="menuitem" tabindex="0">Обо мне</a></li>
                 <li role="none"><a href="#contact" role="menuitem" tabindex="0">Контакты</a></li>
                 <li role="none"><a href="../en/" role="menuitem" tabindex="0"
-                        aria-label="Переключиться на английскую версию">🇺🇸 English</a></li>
+                        aria-label="Переключиться на английскую версию">🌐 English</a></li>
             </ul>
         </div>
     </nav>
@@ -47,9 +47,11 @@
     <main>
         <section id="home" class="home flex fdc aic" tabindex="-1">
             <div class="container flex jcc fdc gap-2 w-100">
-                <h1>Вы нашли <span class="highlight">Бехзода</span> — веб-разработчика, которого заслуживает ваш проект.
+                <h1 class="fade-up">Вы нашли <span class="highlight">Бехзода</span> - веб-разработчика, которого
+                    заслуживает ваш проект.
                 </h1>
-                <p>Создаю быстрые, надежные веб-приложения с акцентом на производительность, удобство и чистую
+                <p class="fade-down">Создаю быстрые, надежные веб-приложения с акцентом на производительность, удобство
+                    и чистую
                     архитектуру.</p>
             </div>
         </section>
@@ -63,7 +65,7 @@
                 </article>
                 <article class="experience-item right">
                     <h3>Frontend разработчик в Asmo Clinic</h3>
-                    <time datetime="2021">2021</time>–<time datetime="2022">2022</time> | Ташкент, Узбекистан
+                    <time datetime="2021">2021</time>-<time datetime="2022">2022</time> | Ташкент, Узбекистан
                 </article>
                 <article class="experience-item left">
                     <h3>Frontend разработчик портфолио 3D-художника</h3>
@@ -76,12 +78,12 @@
             <div class="container">
                 <h2>Образование</h2>
                 <article class="education-item">
-                    <h3>Бакалавр компьютерных наук — Университет Вистула</h3>
-                    <time datetime="2022">2022</time>–<time datetime="2024">2024</time> | Варшава, Польша
+                    <h3>Бакалавр компьютерных наук - Университет Вистула</h3>
+                    <time datetime="2022">2022</time>-<time datetime="2024">2024</time> | Варшава, Польша
                 </article>
                 <article class="education-item">
                     <h3>Выпускник Академического лицея<br>Ташкентский институт архитектуры и строительства</h3>
-                    <time datetime="2020">2020</time>–<time datetime="2022">2022</time> | Ташкент, Узбекистан
+                    <time datetime="2020">2020</time>-<time datetime="2022">2022</time> | Ташкент, Узбекистан
                 </article>
             </div>
         </section>
@@ -104,16 +106,16 @@
         <section id="about" class="section" tabindex="-1">
             <div class="container">
                 <h2>Обо мне</h2>
-                <p class="about-text">Я — фриланс веб-разработчик с опытом фронтенд и бэкенд разработки на JavaScript,
+                <p class="about-text">Я - фриланс веб-разработчик с опытом фронтенд и бэкенд разработки на JavaScript,
                     Node.js и React. Создаю быстрые, доступные и адаптивные сайты с акцентом на чистый код и удобный
                     пользовательский опыт. Работал над полными стек-приложениями, SEO и улучшением UI-дизайна.</p>
             </div>
         </section>
 
-        <section id="contact" class="section" tabindex="-1">
+        <section id="contact" class="section fade-up" tabindex="-1">
             <div class="container">
                 <h2>Контакты</h2>
-                <p>Есть вопросы или проект? Напишите — я отвечаю, да.</p>
+                <p>Есть вопросы или проект? Напишите - я отвечаю, да.</p>
 
                 <div class="contact-grid">
                     <div class="contact-details" role="list">
@@ -162,49 +164,7 @@
         </section>
     </main>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !expanded);
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('#navLinks a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.setAttribute('aria-expanded', false);
-                navLinks.classList.remove('active');
-            });
-        });
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    document.querySelectorAll('section').forEach(section => {
-                        const top = section.offsetTop - 60;
-                        const height = section.offsetHeight;
-                        const id = section.id;
-                        if (scrollY >= top && scrollY < top + height) {
-                            document.querySelectorAll('#navLinks a').forEach(link => {
-                                link.classList.remove('active');
-                                link.removeEventListener('click', preventClick);
-                            });
-                            const activeLink = document.querySelector(`#navLinks a[href="#${id}"]`);
-                            if (activeLink) {
-                                activeLink.classList.add('active');
-                                activeLink.addEventListener('click', preventClick);
-                            }
-                        }
-                    });
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-        function preventClick(e) {
-            e.preventDefault();
-        }
+    <script src="./../script.js">
     </script>
 </body>
 

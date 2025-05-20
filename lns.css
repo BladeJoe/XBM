@@ -298,18 +298,22 @@ p {
 
 /* Animation helper classes */
 .fade-up {
+    animation-delay: 100ms;
     animation: fadeInUp 0.6s ease forwards;
 }
 
 .fade-down {
+    animation-delay: 300ms;
     animation: fadeInDown 0.6s ease forwards;
 }
 
 .fade-left {
+    animation-delay: 100ms;
     animation: fadeInLeft 0.6s ease forwards;
 }
 
 .fade-right {
+    animation-delay: 100ms;
     animation: fadeInRight 0.6s ease forwards;
 }
 

@@ -38,8 +38,8 @@
                 <li role="none"><a href="#skills" role="menuitem" tabindex="0">Stack</a></li>
                 <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
                 <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
-                <li role="none"><a href="../ru/" role="menuitem" tabindex="0"
-                        aria-label="Switch to Russian version">🇷🇺 Russian</a></li>
+                <li role="none"><a href="../ru/" role="menuitem" tabindex="0" aria-label="Switch to Russian version">🌐
+                        Russian</a></li>
             </ul>
         </div>
     </nav>
@@ -47,8 +47,10 @@
     <main>
         <section id="home" class="home flex fdc aic" tabindex="-1">
             <div class="container flex jcc fdc gap-2 w-100">
-                <h1>You found <span class="highlight">Behzod</span> - the web dev your project deserves.</h1>
-                <p>Building fast, reliable web apps that don`t suck, focused on performance, usability, and clean
+                <h1 class="fade-up">You found <span class="highlight">Behzod</span> - the web dev your project
+                    deserves.</h1>
+                <p class="fade-down">Building fast, reliable web apps that don`t suck, focused on performance,
+                    usability, and clean
                     architecture.</p>
             </div>
         </section>
@@ -161,50 +163,7 @@
         </section>
     </main>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !expanded);
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('#navLinks a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.setAttribute('aria-expanded', false);
-                navLinks.classList.remove('active');
-            });
-        });
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    document.querySelectorAll('section').forEach(section => {
-                        const top = section.offsetTop - 60;
-                        const height = section.offsetHeight;
-                        const id = section.id;
-                        if (scrollY >= top && scrollY < top + height) {
-                            document.querySelectorAll('#navLinks a').forEach(link => {
-                                link.classList.remove('active');
-                                link.removeEventListener('click', preventClick);
-                            });
-                            const activeLink = document.querySelector(`#navLinks a[href="#${id}"]`);
-                            if (activeLink) {
-                                activeLink.classList.add('active');
-                                activeLink.addEventListener('click', preventClick);
-                            }
-                        }
-                    });
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-        function preventClick(e) {
-            e.preventDefault();
-        }
-    </script>
+    <script src="./../script.js"></script>
 </body>
 
 </html>
