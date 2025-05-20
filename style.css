@@ -175,12 +175,11 @@ section:nth-child(odd) {
         gap: 16px;
         padding: 0;
         background-color: var(--navbar-bg);
-        transition: max-height 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
+        height: calc(100vh - 60px) !important;
+        max-height: 100vh;
     }
 
     .nav-links.active {
-        height: calc(100vh - 60px) !important;
-        max-height: 100vh;
         justify-content: start;
         opacity: 1;
         padding: 15px 0;
