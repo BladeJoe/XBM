@@ -37,7 +37,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', makeNavActive);
     makeNavActive();
 
-});
-AOS.init({
-    duration: 250
-});
+}); 

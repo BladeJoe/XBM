@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="#01001d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Профессиональное портфолио Behzodkhon Khamdamov - Fullstack разработчик" />
     <meta name="author" content="Behzodkhon Khamdamov" />
@@ -31,7 +32,7 @@
     <nav class="navbar " role="navigation" aria-label="Основная навигация">
         <div class="navbar-container flex ffr aic jcb w100 mx-auto">
             <a href="#home" class="logo-link" aria-label="Перейти на главную">
-                <img src="./../logo.png" alt="Логотип Behzod Khamdamov" height="28" class="logo" />
+                <img src="./../logo.webp" alt="Логотип Behzod Khamdamov" height="28" class="logo" />
             </a>
 
             <button id="hamburger" class="hamburger" aria-controls="navLinks" aria-expanded="false"
@@ -169,11 +170,18 @@
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="./../script.js"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+<script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            AOS.init({ duration: 250 });
+        }, 500);
+    });
+</script>
 
 </html>
