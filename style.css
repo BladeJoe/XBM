@@ -97,6 +97,11 @@ section:nth-child(odd) {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
     background-color: var(--navbar-bg);
     height: 60px;
     padding: 16px;
