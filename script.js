@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Call on scroll and page load
     window.addEventListener('scroll', makeNavActive);
     makeNavActive();
-    AOS.init({
-        duration: 250
-    });
+
+});
+AOS.init({
+    duration: 250
 });
